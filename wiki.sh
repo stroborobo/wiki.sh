@@ -23,6 +23,7 @@ if [ $width -gt $MAXWIDTH ]; then
 	width=$MAXWIDTH
 fi
 
+# TODO: getopt :)
 search='https://en.wikipedia.org/w/index.php?title=Special:Search&search='
 if [ "1$1" = "1-d" ]; then
 	search='https://de.wikipedia.org/wiki/Spezial:Suche?search='

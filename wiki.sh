@@ -23,9 +23,9 @@ if [ $width -gt $MAXWIDTH ]; then
 	width=$MAXWIDTH
 fi
 
-search='https://de.wikipedia.org/wiki/Spezial:Suche?search='
-if [ "1$1" = "1-e" ]; then
-	search='https://en.wikipedia.org/w/index.php?title=Special:Search&search='
+search='https://en.wikipedia.org/w/index.php?title=Special:Search&search='
+if [ "1$1" = "1-d" ]; then
+	search='https://de.wikipedia.org/wiki/Spezial:Suche?search='
 	shift
 fi
 searchterm=`echo "$*" | sed -e 's/ /%20/g'`

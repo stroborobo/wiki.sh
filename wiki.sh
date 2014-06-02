@@ -8,8 +8,8 @@ cmdexists() {
 	command -v "$1" >/dev/null 2>&1 && echo 0 || echo 1
 }
 
-if [ `cmdexists elinks` -eq 1 ]; then
-	echo "$0 depends on elinks."
+if [ `cmdexists elinks` -eq 1 -o `cmdexists curl` -eq 1 ]; then
+	echo "$0 depends on elinks and curl." >&2
 	exit 10
 fi
 
